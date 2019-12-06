@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iamasd.cn/"/>
-  <updated>2019-12-06T02:32:50.137Z</updated>
+  <updated>2019-12-06T14:07:57.393Z</updated>
   <id>http://www.iamasd.cn/</id>
   
   <author>
@@ -17,19 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test1</title>
-    <link href="http://www.iamasd.cn/2019/12/06/test1/"/>
-    <id>http://www.iamasd.cn/2019/12/06/test1/</id>
-    <published>2019-12-06T02:32:07.000Z</published>
-    <updated>2019-12-06T02:32:50.137Z</updated>
+    <title>深入理解JVM-----(一)</title>
+    <link href="http://www.iamasd.cn/2019/12/06/jvm1/"/>
+    <id>http://www.iamasd.cn/2019/12/06/jvm1/</id>
+    <published>2019-12-06T14:05:15.000Z</published>
+    <updated>2019-12-06T14:07:57.393Z</updated>
     
     <summary type="html">
+    
+      深入理解JVM之运行内存模型
     
     </summary>
     
     
+      <category term="jvm" scheme="http://www.iamasd.cn/categories/jvm/"/>
     
-      <category term="hello word" scheme="http://www.iamasd.cn/tags/hello-word/"/>
     
   </entry>
   

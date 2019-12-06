@@ -4,19 +4,19 @@
   
     
     <entry>
-      <title>test1</title>
-      <link href="/2019/12/06/test1/"/>
-      <url>/2019/12/06/test1/</url>
+      <title>深入理解JVM-----(一)</title>
+      <link href="/2019/12/06/jvm1/"/>
+      <url>/2019/12/06/jvm1/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
+      <categories>
+          
+          <category> jvm </category>
+          
+      </categories>
       
-        <tags>
-            
-            <tag> hello word </tag>
-            
-        </tags>
       
     </entry>
     
