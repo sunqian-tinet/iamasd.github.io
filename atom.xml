@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>iamasd</title>
+  <icon>https://www.gravatar.com/avatar/0bbb446669ee6774fed813694880c71f</icon>
+  <subtitle>Exploration never stops</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.iamasd.cn/"/>
+  <updated>2019-12-06T02:32:50.137Z</updated>
+  <id>http://www.iamasd.cn/</id>
+  
+  <author>
+    <name>iamasd</name>
+    <email>2378155584@qq.com</email>
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test1</title>
+    <link href="http://www.iamasd.cn/2019/12/06/test1/"/>
+    <id>http://www.iamasd.cn/2019/12/06/test1/</id>
+    <published>2019-12-06T02:32:07.000Z</published>
+    <updated>2019-12-06T02:32:50.137Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+      <category term="hello word" scheme="http://www.iamasd.cn/tags/hello-word/"/>
+    
+  </entry>
+  
+</feed>
