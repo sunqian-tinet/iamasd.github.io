@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.iamasd.cn/"/>
-  <updated>2019-12-09T02:49:52.000Z</updated>
+  <updated>2019-12-10T11:53:29.151Z</updated>
   <id>http://www.iamasd.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深入理解JVM-----(二)</title>
+    <link href="http://www.iamasd.cn/2019/12/10/jvm2/"/>
+    <id>http://www.iamasd.cn/2019/12/10/jvm2/</id>
+    <published>2019-12-10T11:05:15.000Z</published>
+    <updated>2019-12-10T11:53:29.151Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="深入理解JVM之对象"><a href="#深入理解JVM之对象" class="headerlink" title="深入理解JVM之对象"></a>深入理解JVM之对象</h2><h4 id="1-对象是怎么来的？"><a href="#1-对象是怎么来的？" class="headerlink" title="1.对象是怎么来的？"></a>1.对象是怎么来的？</h4><h5 id="1-1-对象的创建"><a href="#1-1-对象的创建" class="headerlink" title="1.1 对象的创建"></a>1.1 对象的创建</h5><ul><li>对象创建的流程<ul><li>虚拟机遇到一条new指令是，首先会检查这个对应的类能否在常量池中定义到一个类的符号引用</li><li>判断这个类是否已被加载，解析以及初始化</li><li>问这个新对象在Java队中分配内存空间——2种方法<ul><li>指针碰撞</li><li>空闲列表</li></ul></li><li>将分配的内存空间初始化为零值</li><li>设置对象头数据<ul><li>GC分代年龄</li><li>对象的哈希码hashCode</li><li>元数据信息</li></ul></li><li>执行对象方法</li></ul></li></ul><p><img alt data-src="images/jvm2-1.png" class="lazyload"></p><h5 id="1-2-对象结构"><a href="#1-2-对象结构" class="headerlink" title="1.2 对象结构"></a>1.2 对象结构</h5><ul><li>对象头用于存储对象的元数据信息：<ul><li>Mark Word 部分数据的长度为32bit或64bit，存储对象自身运行时的数据—哈希值等。Mark Word一般被设计为非固定的数据结构，以便于存储更多的数据信息和复用自己的存储空间</li><li>类型指针：指向它的类元数据的指针，用于判断对象属于那个类的实例。</li></ul></li><li>示例数据存储的时真正有效的数据。</li><li>对其填充部分只起到占位符的作用。</li></ul><p><img alt data-src="images/jvm2-2.png" class="lazyload"></p><h4 id="2-如何访问对象？"><a href="#2-如何访问对象？" class="headerlink" title="2.如何访问对象？"></a>2.如何访问对象？</h4><h5 id="2-1-对象的访问"><a href="#2-1-对象的访问" class="headerlink" title="2.1 对象的访问"></a>2.1 对象的访问</h5><ul><li>在堆上创建一个对象实例之后，就要通过虚拟机栈中的reference类型数据来操作堆上的对象。<ul><li>使用句柄访问</li><li>直接指针访问（HotSpot虚拟机）</li></ul></li></ul><h5 id="2-2-对比"><a href="#2-2-对比" class="headerlink" title="2.2 对比"></a>2.2 对比</h5><ul><li>垃圾回收对比：1中，当垃圾回收移动对象时，reference中存储的地址时稳定的地址，不需要修改，仅需要修改对象句柄的地址；2中，垃圾回收的时候只需要修改reference中存储的地址。</li><li>访问效率分析，2&gt;1,因为2只进行了一次指针定位，节省了时间的开销</li></ul><h4 id="3-注解"><a href="#3-注解" class="headerlink" title="3.注解"></a>3.注解</h4><ul><li><p>指针碰撞</p><ul><li><p>分配内存空间包括开辟一块内存和移动指针两个步骤</p><p>通俗来讲，在一块内存区域中，存在一个指针，当一个对象创建需要内存空间的时候，指针就向未使用的内存移动相应要创建内存大小的位置。它就像一块围墙，将使用与未使用的内存空间隔离。</p></li><li><p>非原子步骤可能会出项并发问题，Java虚拟机采用CAS(乐观锁)配上失败重试的方式来保证更新的操作原子性</p></li></ul></li><li><p>空闲列表</p><ul><li><p>分配内存空间包括开辟一块内存，和修改空闲列表两个步骤。</p><p>分配表相当于一个宿管阿姨的登记表，你要住宿，那就给你登记，分配住房。</p></li><li><p>非原子步骤可能会出项并发问题，Java虚拟机采用CAS(乐观锁)配上失败重试的方式来保证更新的操作原子性</p></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      深入理解JVM之对象
+    
+    </summary>
+    
+    
+      <category term="jvm" scheme="http://www.iamasd.cn/categories/jvm/"/>
+    
+    
+      <category term="jvm" scheme="http://www.iamasd.cn/tags/jvm/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring基础组件-----@Configuration</title>
