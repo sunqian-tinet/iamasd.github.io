@@ -89,7 +89,7 @@ function activateLightMode(){
 </ul>
 </li>
 </ul>
-<p><img alt data-src="images/jvm2-1.png" class="lazyload"></p>
+<p><img alt data-src="/images/jvm2-1.png" class="lazyload"></p>
 <h5 id="1-2-对象结构"><a href="#1-2-对象结构" class="headerlink" title="1.2 对象结构"></a>1.2 对象结构</h5><ul>
 <li>对象头用于存储对象的元数据信息：<ul>
 <li>Mark Word 部分数据的长度为32bit或64bit，存储对象自身运行时的数据—哈希值等。Mark Word一般被设计为非固定的数据结构，以便于存储更多的数据信息和复用自己的存储空间</li>
@@ -99,7 +99,7 @@ function activateLightMode(){
 <li>示例数据存储的时真正有效的数据。</li>
 <li>对其填充部分只起到占位符的作用。</li>
 </ul>
-<p><img alt data-src="images/jvm2-2.png" class="lazyload"></p>
+<p><img alt data-src="/images/jvm2-2.png" class="lazyload"></p>
 <h4 id="2-如何访问对象？"><a href="#2-如何访问对象？" class="headerlink" title="2.如何访问对象？"></a>2.如何访问对象？</h4><h5 id="2-1-对象的访问"><a href="#2-1-对象的访问" class="headerlink" title="2.1 对象的访问"></a>2.1 对象的访问</h5><ul>
 <li>在堆上创建一个对象实例之后，就要通过虚拟机栈中的reference类型数据来操作堆上的对象。<ul>
 <li>使用句柄访问</li>
